@@ -17,7 +17,7 @@ function caricaMaterie(){
         var div=$('<div id="materia_'+ materie[i].idMateria + '" class="divmateria col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">'
         +'<div class="icon-box">'
         +  '<div class="icon"><i class="bx bxl-dribbble"></i></div>'
-        +  '<h4><a href="">'+ materie[i].Nome + '</a></h4>'
+        +  '<h4><a>'+ materie[i].Nome + '</a></h4>'
         +  '<p>Scegli i minigiochi della materia:'+ materie[i].Nome + '</p>'
         + '</div>'
         + '</div>');

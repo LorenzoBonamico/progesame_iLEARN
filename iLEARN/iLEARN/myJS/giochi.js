@@ -20,10 +20,10 @@ window.onload=function(){
 
 function caricaGiochi(){
     for (let i = 0; i < giochi.length; i++) {
-        var div=$('<div id="gioco_'+ giochi[i].idgioco + '" class="divgioco col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">'
+        var div=$('<div id="gioco_'+ giochi[i].idGioco + '" class="divgioco col-lg-4 col-md-6 d-flex align-items-stretch aos-init aos-animate" data-aos="fade-up">'
         +'<div class="icon-box">'
         +  '<div class="icon"><i class="bx bxl-dribbble"></i></div>'
-        +  '<h4><a href="">'+ giochi[i].Nome + '</a></h4>'
+        +  '<h4><a>'+ giochi[i].Nome + '</a></h4>'
         +  '<p>'+giochi[i].Descrizione + '</p>'
         + '</div>'
         + '</div>');
@@ -32,8 +32,20 @@ function caricaGiochi(){
 
     $(".divgioco").click(function(){
         let idgioco=$(this).attr("id").split("_")[1];
-        //location.href="giochi.html?idmateria="+idmateria;
+        var gioco=getGiocoFromIdGioco(idgioco);
+        console.log(idgioco);
+        console.log(gioco);
+        location.href=gioco.PercorsoGioco;
     });
+}
+
+function getGiocoFromIdGioco(idgioco){
+    var gioco=null;
+    giochi.forEach(g => {
+        if(g.idGioco==idgioco)
+            gioco=g;
+    });
+    return gioco;
 }
 
 function findGetParameter(parameterName) {

@@ -1,0 +1,103 @@
+body {
+  font-family: 'Courier';
+  margin: 0;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.headerContainer {
+  display: flex;
+}
+
+#addCard {
+  background: none;
+  border: none;
+  font-size: 40px;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  width: 80vw;
+  height: auto;
+  background-color: rgb(30, 30, 30);
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  height: 85px;  
+  background-color: rgb(56, 56, 56);
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100px;
+  background-color: green;  
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 85px;
+  width: 100px;
+  background-color: white;
+}
+
+#bank {
+  display: flex;
+    flex-wrap: wrap;
+    width: 80vw;
+    height: auto;
+    background-color: rgb(30, 30, 30);
+    margin-bottom: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+
+/*button*/
+button {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+ }
+ 
+ button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+ }
+ 
+ @keyframes pulse512 {
+  0% {
+   box-shadow: 0 0 0 0 #05bada66;
+  }
+ 
+  70% {
+   box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+ 
+  100% {
+   box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+ }
